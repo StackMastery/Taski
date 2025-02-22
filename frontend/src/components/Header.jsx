@@ -49,13 +49,6 @@ export default function Header() {
                         Dashboard
                       </Link>
                       <span className="w-full my-[1px] h-[1px] flex bg-white/10"></span>
-                      <Link
-                        to={`./profile`}
-                        className="w-full py-1 px-3 hover:bg-white/10 rounded-[3px]"
-                      >
-                        Profile
-                      </Link>
-                      <span className="w-full my-[1px] h-[1px] flex bg-white/10"></span>
                       <button
                         onClick={() => {
                           signOut(auth);
