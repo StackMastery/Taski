@@ -222,7 +222,7 @@ export default function Dashboard() {
                 <Droppable key={columnKey} droppableId={columnKey}>
                   {(provided) => (
                     <div
-                      className="border border-black/[0.2] h-full dark:border-white/[0.2] flex group overflow-hidden relative p-10"
+                      className="border h-screen border-black/[0.2] h-full dark:border-white/[0.2] flex group overflow-hidden relative p-10"
                       ref={provided.innerRef}
                       {...provided.droppableProps}
                     >
@@ -261,12 +261,14 @@ export default function Dashboard() {
                                         {task.description?.slice(0, 100)}
                                         {task?.description?.length > 100 &&
                                           "..."}
-                                        <div className="flex items-center gap-2 pt-2">
-                                          <Clock7 strokeWidth={1} size={18} />
-                                          {moment(task?.createdAt).fromNow()}
-                                        </div>
-                                        <div className="flex items-center gap-2 pt-2">
-                                          Category - {task?.category}
+                                        <div className="flex items-center gap-2">
+                                          <div className="flex items-center gap-2 pt-2">
+                                            <Clock7 strokeWidth={1} size={18} />
+                                            {moment(task?.createdAt).fromNow()}
+                                          </div>
+                                          <div className="flex items-center gap-2 pt-2">
+                                            Category - {task?.category}
+                                          </div>
                                         </div>
                                       </p>
                                     </div>

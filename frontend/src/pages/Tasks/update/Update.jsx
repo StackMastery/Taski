@@ -135,13 +135,6 @@ export default function Update() {
               onChange={(e) => setDescription(e.target.value)}
             />
             <div className="pt-5 flex justify-between w-full -mb-5 items-center">
-              <button className="hover:bg-white/10 transition-all p-2 rounded-md group">
-                <Paperclip
-                  className="group-hover:rotate-90 transition-all"
-                  size={24}
-                  strokeWidth={1}
-                />
-              </button>
               <span className="text-sm text-white/50 ">
                 Max {description?.length} - 200
               </span>
